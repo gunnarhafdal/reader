@@ -1,4 +1,4 @@
-var myProductName = "River5"; myVersion = "0.6.10"; 
+var myProductName = "River5"; myVersion = "0.6.11"; 
 
 /*  The MIT License (MIT)
 	Copyright (c) 2014-2018 Dave Winer
@@ -1737,7 +1737,7 @@ function myConsoleLog (s) { //3/28/17 by DW
 		downloadPodcast (item, urlfeed); //4/17/17 by DW
 		
 		if (config.newItemCallback !== undefined) { //5/17/17 by DW
-			config.newItemCallback (urlfeed, itemFromParser, item);
+			config.newItemCallback (urlfeed, itemFromParser, item, feedstats.lists);
 			}
 		
 		callAddToRiverCallbacks (urlfeed, itemFromParser, item); //6/19/15 by DW
@@ -2910,4 +2910,3 @@ function init (userConfig, callback) {
 			});
 		});
 	}
-
